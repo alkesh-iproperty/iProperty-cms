@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <include layout="@layout/app_bar_main" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/menuPlayground"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5px"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_playground" />
+
+                            <com.oozeetech.iproperty_cms.widgets.DLTextView
+                                style="@style/txt_primary_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/menu_playground" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/menuBBQ"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5px"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_bbq" />
+
+                            <com.oozeetech.iproperty_cms.widgets.DLTextView
+                                style="@style/txt_primary_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/menu_bbq" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/menuGym"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5px"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_gym" />
+
+                            <com.oozeetech.iproperty_cms.widgets.DLTextView
+                                style="@style/txt_primary_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/menu_gym" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/menuFunctionHall"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5px"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_function_hall" />
+
+                            <com.oozeetech.iproperty_cms.widgets.DLTextView
+                                style="@style/txt_primary_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/menu_function_hall" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/menuTennisCourt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0.5px"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_tennis_court" />
+
+                        <com.oozeetech.iproperty_cms.widgets.DLTextView
+                            style="@style/txt_primary_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="@string/menu_tennis_court" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuBasketBall"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0.5px"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_basket_ball" />
+
+                        <com.oozeetech.iproperty_cms.widgets.DLTextView
+                            style="@style/txt_primary_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="@string/menu_basket_ball" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

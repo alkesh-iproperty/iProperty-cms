@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">iProperty-cms</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="err_email">Enter email address</string>
+    <string name="err_email_invalid">Invalid email address</string>
+    <string name="err_password">Enter password</string>
+    <string name="err_conf_password">Confirm password</string>
+    <string name="err_password_limit">Password must be at least 5 characters long</string>
+    <string name="err_password_match">Password does not match</string>
+    <string name="err_failed">Failed</string>
+    <string name="err_firstname">Enter FirstName</string>
+    <string name="err_lastname">Enter LastName</string>
+    <string name="err_company_name">Enter Company Name</string>
+    <string name="err_busine_type">Select business type</string>
+    <string name="err_country">Select Country</string>
+
+    <string name="hint_forgot_password">Forgot?</string>
+    <string name="hint_create_account">Create Account</string>
+    <string name="or">OR</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_msg">Are you sure want to logout?</string>
+
+    <string name="hint_firstname">First Name</string>
+    <string name="hint_lastname">Last Name</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_skip_login">Skip Login</string>
+    <string name="hint_yes">Yes</string>
+    <string name="hint_no">No</string>
+    <string name="hint_ok">Ok</string>
+    <string name="hint_cancel">Cancel</string>
+    <string name="hint_new_acc">Register New Account</string>
+    <string name="hint_continue">Continue with this account</string>
+
+
+    <!-- Navigation Menu -->
+    <string name="nav_action_home">Facility Booking</string>
+
+
+    <!-- Facility Booking Menu -->
+    <string name="menu_playground">PLAYGROUND</string>
+    <string name="menu_bbq">BBQ</string>
+    <string name="menu_gym">GYM</string>
+    <string name="menu_function_hall">FUNCTION HALL</string>
+    <string name="menu_tennis_court">TENNIS COURT</string>
+    <string name="menu_basket_ball">BASKET BALL</string>
+    <string name="title_facility_booking">Facility Booking</string>
+    <string name="nav_action_fault_repairing">Fault Repairing</string>
+    <string name="nav_action_important_number">Important Numbers</string>
+    <string name="nav_action_notices">Notices</string>
+    <string name="nav_action_management">Management</string>
+    <string name="nav_action_events">Events</string>
+    <string name="nav_action_gallery">Gallery</string>
+    <string name="nav_action_payment">Payment</string>
+    <string name="nav_action_website">Website</string>
+    <string name="nav_action_guest_list_request">Guest List Request</string>
+    <string name="hint_more">More</string>
+    <string name="event_on_month">Event on month :</string>
+    <string name="to">To</string>
+    <string name="noOfPeopleJoined">Number of peaople joined :</string>
+    <string name="description">Description : </string>
+    <string name="hint_join">Join</string>
+    <string name="hint_leave">Leave</string>
+    <string name="hint_username">Username</string>
+    <string name="btn_login">Login</string>
+    <string name="err_username">Enter Username</string>
+    <string name="internet_err">No Internet Connection</string>
+    <string name="title_notice">Notices</string>
+    <string name="title_management">Management</string>
+    <string name="title_important_no">Important Numbers</string>
+    <string name="title_event">Event</string>
+    <string name="nav_action_logout">Logout</string>
+
+    <string name="APIKey">AIzaSyAWCr50jNiC4W-Mg49k9yyaSyISfDrYPV0</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_confirm_pass">Confirm Password</string>
+    <string name="btn_update_password">Change Password</string>
+
+</resources>
