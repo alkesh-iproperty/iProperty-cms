@@ -16,4 +16,8 @@ public class RequestParamsUtils {
     public static final String PAGE = "page";
     public static final String SEARCH = "search";
     public static final String NEWPASS = "newpass";
+    public static final String ID = "id";
+    public static final String EVENT_ID = "event_id";
+    public static final String ACTION = "action";
+    public static final String NO_OF_PERSO = "no_of_person";
 }

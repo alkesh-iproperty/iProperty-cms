@@ -1,17 +1,23 @@
 package com.oozeetech.iproperty_cms.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 import com.oozeetech.iproperty_cms.R;
+import com.oozeetech.iproperty_cms.adapter.EventsAdapter;
+import com.oozeetech.iproperty_cms.models.EventsResponse;
 import com.oozeetech.iproperty_cms.utils.AsyncHttpRequest;
 import com.oozeetech.iproperty_cms.utils.AsyncResponseHandler;
 import com.oozeetech.iproperty_cms.utils.Constants;
@@ -21,6 +27,8 @@ import com.oozeetech.iproperty_cms.utils.RequestParamsUtils;
 import com.oozeetech.iproperty_cms.utils.URLs;
 import com.oozeetech.iproperty_cms.utils.Utils;
 
+import java.util.ArrayList;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -29,8 +37,8 @@ import butterknife.ButterKnife;
  */
 public class EventsActivity extends BaseActivity {
 
-    @Bind(R.id.rvNotices)
-    RecyclerView rvNotices;
+    @Bind(R.id.rvEvents)
+    RecyclerView rvEvents;
     @Bind(R.id.llPlaceHolder)
     LinearLayout llPlaceHolder;
     @Bind(R.id.mSwipeRefreshLayout)
@@ -38,6 +46,7 @@ public class EventsActivity extends BaseActivity {
     EndlessList endlessList;
     private LinearLayoutManager mLayoutManager;
     private int page;
+    private EventsAdapter adapter;
 
 
     @Override
@@ -53,8 +62,8 @@ public class EventsActivity extends BaseActivity {
 
         setTitleText(getString(R.string.title_event));
         mLayoutManager = new LinearLayoutManager(getActivity());
-        rvNotices.setLayoutManager(mLayoutManager);
-        rvNotices.setLayoutAnimation(Utils.getRowFadeSpeedAnimation(getActivity()));
+        rvEvents.setLayoutManager(mLayoutManager);
+        rvEvents.setLayoutAnimation(Utils.getRowFadeSpeedAnimation(getActivity()));
 
         mSwipeRefreshLayout.setColorSchemeResources(R.color.orange, R.color.colorAccent, R.color.colorPrimaryDark);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -62,7 +71,7 @@ public class EventsActivity extends BaseActivity {
             public void onRefresh() {
                 if (Utils.isInternetConnected(getActivity())) {
 
-
+                getEventsList();
 
                 } else {
                     showToast(R.string.internet_err, Toast.LENGTH_SHORT);
@@ -70,8 +79,19 @@ public class EventsActivity extends BaseActivity {
             }
         });
 
-//        adapter = new NewsAdapter(getActivity());
-//        rvNotices.setAdapter(adapter);
+        adapter = new EventsAdapter(getActivity());
+        rvEvents.setAdapter(adapter);
+
+        adapter.setEventListner(new EventsAdapter.EventListner() {
+            @Override
+            public void onEventItemClick(int position) {
+
+                Intent intent = new Intent(getActivity(),EventsDetailsActivity.class);
+                intent.putExtra(Constants.PARAM_EVENT_DATA,new Gson().toJson(adapter.getEventData(position)));
+                startActivity(intent);
+            }
+        });
+
         initEndlessList();
         resetPage();
 
@@ -89,22 +109,21 @@ public class EventsActivity extends BaseActivity {
 
     public void refreshPlaceHolder() {
 
-//        if (adapter.getItemCount() > 0) {
-//            llPlaceHolder.setVisibility(View.GONE);
-//        } else {
-//            llPlaceHolder.setVisibility(View.VISIBLE);
-//        }
+        if (adapter.getItemCount() > 0) {
+            llPlaceHolder.setVisibility(View.GONE);
+        } else {
+            llPlaceHolder.setVisibility(View.VISIBLE);
+        }
     }
 
     private void resetPage() {
         page = 0;
-//        adapter.clear();
+        adapter.clear();
     }
 
-    int TOP_RECORD = 25;
 
     private void initEndlessList() {
-        endlessList = new EndlessList(rvNotices, (LinearLayoutManager) mLayoutManager);
+        endlessList = new EndlessList(rvEvents, (LinearLayoutManager) mLayoutManager);
         endlessList.setOnLoadMoreListener(new EndlessList.OnLoadMoreListener() {
 
             @Override
@@ -126,7 +145,7 @@ public class EventsActivity extends BaseActivity {
 
         try {
 
-            showProgress("");
+            page++;
 
             RequestParams params = new RequestParams();
             params.put(RequestParamsUtils.WS, Constants.CONDO);
@@ -175,28 +194,32 @@ public class EventsActivity extends BaseActivity {
             try {
                 Debug.e("", "EventsResponse# " + response);
                 if (response != null && response.length() > 0) {
-//                    News news = new Gson().fromJson(
-//                            response, new TypeToken<News>() {
-//                            }.getType());
-//
-//                    if (news.st == 1)
-//
-//                        if (news.data.size() > 0) {
-//                            adapter.addAll(news.data);
-//                        } else {
-//
-//                            if (adapter.getItemCount() > 0) {
-//                                llPlaceHolder.setVisibility(View.GONE);
-//                            } else {
-//                                llPlaceHolder.setVisibility(View.VISIBLE);
-//                            }
-//                            endlessList.disableLoadMore();
-//                        }
+                    EventsResponse events = new Gson().fromJson(
+                            response, new TypeToken<EventsResponse>() {
+                            }.getType());
+
+                    if (events.st == 1) {
+
+                        if (events.data.size() > 0) {
+
+                            adapter.addAll((ArrayList<EventsResponse.Datum>) events.data);
+
+                        } else {
+
+                            refreshPlaceHolder();
+                            endlessList.disableLoadMore();
+                        }
+                    }else {
+                        refreshPlaceHolder();
+                        endlessList.disableLoadMore();
+                    }
 
                 } else {
+
                     endlessList.disableLoadMore();
                 }
 
+                refreshPlaceHolder();
 
             } catch (Exception e) {
                 e.printStackTrace();

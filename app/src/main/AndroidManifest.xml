@@ -33,6 +33,10 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".ui.EventsActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.WebsiteActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.GuestRequestActivity"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".ui.EventsDetailsActivity"
             android:screenOrientation="portrait"
             android:parentActivityName=".ui.EventsActivity">

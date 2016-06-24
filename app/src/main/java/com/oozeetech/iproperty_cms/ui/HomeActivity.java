@@ -21,10 +21,17 @@ public class HomeActivity extends BaseActivity {
 
         initDrawer();
 
+
+
+        setTitleText(getString(R.string.title_facility_booking));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         navigationView.setCheckedItem(R.id.nav_action_facility_booking);
 
         setNavUsername();
-
-        setTitleText(getString(R.string.title_facility_booking));
     }
 }

@@ -204,15 +204,30 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
 
             if(!navigationView.getMenu().getItem(5).isChecked()) {
-                Intent intent = new Intent(getActivity(), EventsDetailsActivity.class);
+                Intent intent = new Intent(getActivity(), EventsActivity.class);
                 startActivity(intent);
             }
+
+        }
+
+        if (id == R.id.nav_action_website) {
+
+
+                Intent intent = new Intent(getActivity(), WebsiteActivity.class);
+                startActivity(intent);
 
         }
 
         if (id == R.id.nav_action_logout) {
 
            confirmLogout();
+
+        }
+
+        if (id == R.id.nav_action_guest_list_request) {
+
+            Intent intent = new Intent(getActivity(), GuestRequestActivity.class);
+            startActivity(intent);
 
         }
 

@@ -25,7 +25,8 @@
                 android:id="@+id/rvEvents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="vertical" />
+                android:scrollbars="vertical"
+                android:background="@color/gray_200"/>
 
             <LinearLayout
                 android:id="@+id/llPlaceHolder"

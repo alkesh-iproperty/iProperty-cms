@@ -130,14 +130,14 @@ public class LoginActivity extends BaseActivity {
 
                     if (loginRider.st == 1) {
 
-                        Utils.setPref(getActivity(), RequestParamsUtils.CONDO_ID, "" + loginRider.data.condoId);
-                        Utils.setPref(getActivity(), RequestParamsUtils.RES_ID, "" + loginRider.data.resId);
-                        Utils.setPref(getActivity(), RequestParamsUtils.TOKEN, "" + loginRider.data.token);
+                        Utils.setPref(getActivity(), RequestParamsUtils.CONDO_ID, "" + loginRider.data.get(0).condoId);
+                        Utils.setPref(getActivity(), RequestParamsUtils.RES_ID, "" + loginRider.data.get(0).resId);
+                        Utils.setPref(getActivity(), RequestParamsUtils.TOKEN, "" + loginRider.data.get(0).token);
                         Utils.setPref(getActivity(), Constants.LOGIN_INFO, response);
 
-                        Utils.setPref(getActivity(),Constants.USERNAME,loginRider.data.firstName+" "+loginRider.data.lastName);
+                        Utils.setPref(getActivity(),Constants.USERNAME,loginRider.data.get(0).firstName+" "+loginRider.data.get(0).lastName);
 
-                        if(loginRider.data.otp.equals("1")){
+                        if(loginRider.data.get(0).otp.equals("1")){
 
                             Intent intent = new Intent(getActivity(), ChangePasswordActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

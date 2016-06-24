@@ -15,12 +15,11 @@ public class Login {
     @SerializedName("msg")
     public String msg;
     @SerializedName("data")
-    public Data data;
+    public List<Datum> data;
 
-    public class Data {
+    public class Datum {
 
         @SerializedName("res_id")
-        
         public String resId;
         @SerializedName("condo_name")
         public String condoName;

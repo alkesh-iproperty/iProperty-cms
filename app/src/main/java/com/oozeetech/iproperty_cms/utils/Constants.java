@@ -23,6 +23,7 @@ public class Constants {
     public static final String GCM_KEY = "fcm_key";
     public static final String LOGIN_INFO = "login_info";
     public static final String USERNAME = "username";
+    public static final String PARAM_EVENT_DATA = "event_data";
     public static int MAX_DISTANCE = 2000;
 
     public static String DEVICE_ID = "APA91bFzqHbowAiqI6C17BRbdQ8Ndy8EL7Luk9OZ0kObM9Bav_uMWfuHI3diw7-mryYZpec6R9rxsYqxhAWC28_m2sOMIdpHTj-X3ohf08BJoSkcFCQlHFogAoDCNubbr9mHfsLqmzEt";

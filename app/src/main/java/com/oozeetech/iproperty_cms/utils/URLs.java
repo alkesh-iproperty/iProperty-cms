@@ -14,10 +14,15 @@ public class URLs {
     public final String NOTICE_LIST = MAIN_URL + "/notice/listnotice";
     public final String MANAGEMENT_LIST = MAIN_URL + "/management/listmanagement";
     public final String EVENTS_LIST = MAIN_URL + "/event/checkevent";
+    public final String EVENT_READ_UPDATE = MAIN_URL + "/event/upunreadevent";
+    public final String EVENT_JOIN_LEAVE = MAIN_URL + "/event/eventaction";
     public final String OTP = MAIN_URL + "/resident/otp";
+    public final String WEB_SITE = MAIN_URL + "/website/listwebsite";
+
 
     public final String MANAGEMENT_IMG_URL = "http://demo.condomanagementsystem.com/upload/management/";
     public final String NOTICE_IMG_URL = "http://demo.condomanagementsystem.com/upload/notice/";
+    public final String EVENT_IMG_URL = "http://demo.condomanagementsystem.com/upload/event/";
 
 
     public final String SIMPLE_LOGIN_URL = MAIN_URL + "/Login";

@@ -14,6 +14,7 @@
         android:padding="12dp">
 
         <com.oozeetech.iproperty_cms.widgets.DLTextView
+            android:id="@+id/tvEventListTitle"
             style="@style/txt_txt_primary_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
             style="@style/txt_txt_secondary_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/tvEventListDesc"
             android:text="@string/app_name" />
 
         <LinearLayout
@@ -49,7 +51,7 @@
                     android:src="@drawable/ic_calendar" />
 
                 <com.oozeetech.iproperty_cms.widgets.DLTextView
-                    android:id="@+id/tvEventDate"
+                    android:id="@+id/tvEventListDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -72,7 +74,7 @@
                     android:src="@drawable/ic_clock" />
 
                 <com.oozeetech.iproperty_cms.widgets.DLTextView
-                    android:id="@+id/tvEventTime"
+                    android:id="@+id/tvEventListTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -88,6 +90,7 @@
                 android:background="@color/colorPrimary"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:id="@+id/llMoreEvent"
                 android:padding="5dp">
 
                 <com.oozeetech.iproperty_cms.widgets.DLTextView

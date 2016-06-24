@@ -79,5 +79,23 @@
     <string name="hint_new_password">New Password</string>
     <string name="hint_confirm_pass">Confirm Password</string>
     <string name="btn_update_password">Change Password</string>
+    <string name="msg_joined">Joined Event Successfully</string>
+    <string name="msg_left">Successfully Left Event</string>
+    <string name="msg_already_accepted_rejected">Already accepted or declined</string>
+    <string name="msg_not_updated">Not Updated</string>
+    <string name="msg_no_data_found">No Data Found</string>
+    <string name="msg_invalid_event_type">Event Type is not valid</string>
+    <string name="msg_exception">Exception</string>
+    <string name="msg_unauthorised">Unauthorized Access</string>
+    <string name="hint_cencel">Cancel</string>
+    <string name="err_no_of_person">Enter No. of persons</string>
+    <string name="hint_no_of_person">No. of persons</string>
+    <string name="title_guest_request">Guest List Request</string>
+    <string name="title_add_request">Add Request</string>
+    <string name="title_recent_request">Recent Request</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_submit">Submit</string>
+    <string name="hint_expected_person">Expected Persons</string>
+    <string name="hint_time">Time</string>
 
 </resources>
