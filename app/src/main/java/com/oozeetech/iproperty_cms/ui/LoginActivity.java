@@ -15,6 +15,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 import com.oozeetech.iproperty_cms.R;
 import com.oozeetech.iproperty_cms.models.Login;
+import com.oozeetech.iproperty_cms.models.MasterFacilityResponse;
 import com.oozeetech.iproperty_cms.utils.AsyncHttpRequest;
 import com.oozeetech.iproperty_cms.utils.AsyncResponseHandler;
 import com.oozeetech.iproperty_cms.utils.Constants;
@@ -132,6 +133,8 @@ public class LoginActivity extends BaseActivity {
 
                         Utils.setPref(getActivity(), RequestParamsUtils.CONDO_ID, "" + loginRider.data.get(0).condoId);
                         Utils.setPref(getActivity(), RequestParamsUtils.RES_ID, "" + loginRider.data.get(0).resId);
+                        Utils.setPref(getActivity(), RequestParamsUtils.BLOCK_ID, "" + loginRider.data.get(0).blockId);
+                        Utils.setPref(getActivity(), RequestParamsUtils.UNIT_ID, "" + loginRider.data.get(0).unitId);
                         Utils.setPref(getActivity(), RequestParamsUtils.TOKEN, "" + loginRider.data.get(0).token);
                         Utils.setPref(getActivity(), Constants.LOGIN_INFO, response);
 
@@ -147,11 +150,14 @@ public class LoginActivity extends BaseActivity {
 
                         }else {
 
-                            Intent intent = new Intent(getActivity(), HomeActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(intent);
-                            finish();
+                            if(Utils.isInternetConnected(getActivity())){
+
+                                getFacilityMaster();
+                            }else {
+                                showToast(R.string.internet_err,Toast.LENGTH_SHORT);
+                            }
+
+
                         }
 
                     } else if(loginRider.st==502) {
@@ -170,6 +176,96 @@ public class LoginActivity extends BaseActivity {
         @Override
         public void onFailure(Throwable e, String content) {
             dismissProgress();
+        }
+    }
+
+    public void getFacilityMaster() {
+
+        try {
+
+            RequestParams params = new RequestParams();
+            params.put(RequestParamsUtils.WS, Constants.CONDO);
+            params.put(RequestParamsUtils.RES_ID, Utils.getPref(getActivity(), RequestParamsUtils.RES_ID, ""));
+            params.put(RequestParamsUtils.CONDO_ID, Utils.getPref(getActivity(), RequestParamsUtils.CONDO_ID, ""));
+            params.put(RequestParamsUtils.TOKEN, Utils.getPref(getActivity(), RequestParamsUtils.TOKEN, ""));
+            Debug.e("MasterFacilityList", params.toString());
+
+            AsyncHttpClient clientPhotos = AsyncHttpRequest.newRequest();
+            clientPhotos.get(new URLs().MASTER_FACILITY, params, new MasterFacilityResponseHandler(getActivity()));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private class MasterFacilityResponseHandler extends AsyncResponseHandler {
+
+        public MasterFacilityResponseHandler(Activity context) {
+            super(context);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+        }
+
+        @Override
+        public void onFinish() {
+            super.onFinish();
+            try {
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onSuccess(String response) {
+
+            try {
+
+                Debug.e("", "MasterFacilityListResponse# " + response);
+
+                if (response != null && response.length() > 0) {
+
+                    MasterFacilityResponse res = new Gson().fromJson(
+                            response, new TypeToken<MasterFacilityResponse>() {
+                            }.getType());
+
+                    if (res.st == 1) {
+
+                        Utils.setPref(getActivity(),Constants.MASTER_FACILITY,response);
+
+                    } else if (res.st == 502) {
+
+                        getActivity().showToast(R.string.msg_no_data_found, Toast.LENGTH_SHORT);
+
+                    } else if (res.st == 505) {
+
+                        getActivity().showToast(R.string.msg_exception, Toast.LENGTH_SHORT);
+
+                    } else if (res.st == 506) {
+
+                        getActivity().showToast(R.string.msg_unauthorised, Toast.LENGTH_SHORT);
+                    }
+
+                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        @Override
+        public void onFailure(Throwable e, String content) {
+
         }
     }
 

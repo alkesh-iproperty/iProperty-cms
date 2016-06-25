@@ -515,6 +515,8 @@ public class Utils {
         delPref(context,RequestParamsUtils.CONDO_ID);
         delPref(context,RequestParamsUtils.RES_ID);
         delPref(context,RequestParamsUtils.TOKEN);
+        delPref(context,RequestParamsUtils.UNIT_ID);
+        delPref(context,RequestParamsUtils.BLOCK_ID);
     }
 
 }

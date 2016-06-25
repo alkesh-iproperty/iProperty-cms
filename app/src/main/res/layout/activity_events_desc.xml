@@ -23,8 +23,8 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat"
-                    app:theme="@style/ThemeOverlay.AppCompat">
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
                     <com.oozeetech.iproperty_cms.widgets.DLTextView
                         android:id="@+id/tvTitle"

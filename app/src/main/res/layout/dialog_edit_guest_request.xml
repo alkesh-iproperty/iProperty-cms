@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:focusable="true"
-        android:focusableInTouchMode="true"/>
+        android:focusableInTouchMode="true"
+        />
 
     <android.support.design.widget.TextInputLayout
         style="@style/GrayTextAppearence.App.TextInputLayout_"
@@ -132,22 +133,11 @@
             android:textCursorDrawable="@null" />
 
         <View
+
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:background="@color/secondaryText" />
 
     </android.support.design.widget.TextInputLayout>
-
-    <com.oozeetech.iproperty_cms.widgets.DButtonMaterial
-        android:id="@+id/btnAddReq"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="@string/hint_submit"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        style="@style/InverseLightFlatWaveColorButtonRippleStyle"
-        android:background="@drawable/btn_bg"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

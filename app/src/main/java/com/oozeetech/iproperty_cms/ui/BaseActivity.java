@@ -17,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.util.Util;
 import com.oozeetech.iproperty_cms.R;
 import com.oozeetech.iproperty_cms.utils.AsyncProgressDialog;
 import com.oozeetech.iproperty_cms.utils.Constants;
@@ -176,7 +175,16 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
             }
 
-        } if (id == R.id.nav_action_important_number) {
+        }
+
+        if (id == R.id.nav_action_fault_repairing) {
+
+            Intent intent = new Intent(getActivity(), FaultReportingActivity.class);
+            startActivity(intent);
+
+        }
+
+        if (id == R.id.nav_action_important_number) {
 
             if(!navigationView.getMenu().getItem(2).isChecked()){
 

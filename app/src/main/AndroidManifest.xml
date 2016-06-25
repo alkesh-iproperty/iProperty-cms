@@ -4,7 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -37,6 +41,17 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".ui.GuestRequestActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.FaultReportingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.FacilityBookindActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.HomeActivity" />
+        <activity android:name=".ui.DetailFacilityBookingActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.HomeActivity"></activity>
+        <activity android:name=".ui.ViewAllFaultsActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.FaultReportingActivity"></activity>
         <activity android:name=".ui.EventsDetailsActivity"
             android:screenOrientation="portrait"
             android:parentActivityName=".ui.EventsActivity">

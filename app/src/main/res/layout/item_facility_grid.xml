@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1px"
+    android:background="@color/gray_200"
+    android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivFacilityGridIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_playground" />
+
+            <com.oozeetech.iproperty_cms.widgets.DLTextView
+                android:id="@+id/tvFacilityGrid"
+                style="@style/txt_primary_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/menu_playground" />
+        </LinearLayout>
+
+
+</LinearLayout>

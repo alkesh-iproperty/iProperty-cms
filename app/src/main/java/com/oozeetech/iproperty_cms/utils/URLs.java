@@ -9,6 +9,8 @@ public class URLs {
 
     public static final String MAIN_URL = "http://www.demo.condomanagementsystem.com";
 
+
+
     public final String LOGIN_URL = MAIN_URL + "/resident/residentlogin";
     public final String IMPORTANT_NUMBERS = MAIN_URL + "/emergencyno/listemergencyno";
     public final String NOTICE_LIST = MAIN_URL + "/notice/listnotice";
@@ -18,12 +20,21 @@ public class URLs {
     public final String EVENT_JOIN_LEAVE = MAIN_URL + "/event/eventaction";
     public final String OTP = MAIN_URL + "/resident/otp";
     public final String WEB_SITE = MAIN_URL + "/website/listwebsite";
-
+    public final String GUEST_REQUEST_LIST =  MAIN_URL + "/guestlistrequest/guestlist";
+    public final String DELETE_GUEST_REQUEST =  MAIN_URL + "/guestlistrequest/deleteglr";
+    public final String EDIT_GUEST_REQUEST =  MAIN_URL + "/guestlistrequest/guestlistupdate";
+    public final String ADD_GUEST_REQUEST = MAIN_URL + "/guestlistrequest/createguestlistrequest";
+    public final String MASTER_FACILITY = MAIN_URL + "/facilitymaster/listfacilitymaster";
+    public final String CHILD_FACILITY = MAIN_URL + "/facilitychild/listfts";
+    public final String ADD_BOOKING =  MAIN_URL + "/facilitybooking/bookfacility";
+    public final String VIEW_ALL_FAULTS =   MAIN_URL + "/faultreporting/listfaultphoto";
+    public final String ADD_FAULT =  MAIN_URL + "/faultreporting/addfault";
 
     public final String MANAGEMENT_IMG_URL = "http://demo.condomanagementsystem.com/upload/management/";
     public final String NOTICE_IMG_URL = "http://demo.condomanagementsystem.com/upload/notice/";
     public final String EVENT_IMG_URL = "http://demo.condomanagementsystem.com/upload/event/";
-
+    public final String SLIDING_IMAGES = "http://demo.condomanagementsystem.com/upload/facility/";
+    public final String FAULT_UPLOAD = "http://demo.condomanagementsystem.com/upload/fault/";
 
     public final String SIMPLE_LOGIN_URL = MAIN_URL + "/Login";
     public final String REGISTRATION_URL = MAIN_URL + "/UserRegistration";

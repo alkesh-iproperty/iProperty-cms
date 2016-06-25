@@ -97,5 +97,34 @@
     <string name="hint_submit">Submit</string>
     <string name="hint_expected_person">Expected Persons</string>
     <string name="hint_time">Time</string>
+    <string name="hint_delete">Delete</string>
+    <string name="hint_edit">Edit</string>
+    <string name="hint_confirm_delete">Are you sure You want to delete this item?</string>
+    <string name="err_add_req_guest_name">Enter Name</string>
+    <string name="err_add_req_expected_people">Enter Expected People</string>
+    <string name="err_add_req_time">Enter Time</string>
+    <string name="hint_date">Date</string>
+    <string name="err_add_req_date">Enter Date</string>
+    <string name="msg_success_add_guest">Successfully registered</string>
+    <string name="msg_facility_not_found">Facility Master Not Found</string>
+    <string name="msg_child_facility_not_found">Facility child not found</string>
+    <string name="msg_to_erlier">You can\'t book too earlier</string>
+    <string name="msg_blocked_by_admin">Your account has been blocked by management. Please contact them for more clarification</string>
+    <string name="msg_exeed_limit">You have exceeded your monthly booking quota</string>
+    <string name="hint_book">Book</string>
+    <string name="hint_fees">Fees</string>
+    <string name="hint_fees_">Fees :</string>
+    <string name="msg_free_facility">This Facility is free to use. No need to book this facility</string>
+    <string name="hint_take_picture">Take a picture</string>
+    <string name="msg_fault_report">If you find any damages in your premises, Please take a picture and send it to us ans we will repair it as soon as possible</string>
+    <string name="title_fault_reporting">Fault Reporting</string>
+    <string name="menu_view_all">View All</string>
+    <string name="title_all_faults">Past Repoted Faults</string>
+    <string name="hint_fault_desc">Description</string>
+    <string name="hint_fault_title">Title</string>
+    <string name="err_fault_title">Enter Fault Title</string>
+    <string name="err_description">Enter Desciption</string>
+    <string name="msg_upload_failed">Failed Image Upload</string>
+    <string name="msg_success_add_fault">Fault reported successfully</string>
 
 </resources>

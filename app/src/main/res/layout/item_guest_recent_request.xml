@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
-    android:paddingTop="8dp">
+    android:paddingTop="10dp">
 
 
     <LinearLayout
@@ -15,9 +15,9 @@
         android:layout_gravity="center_vertical"
         android:orientation="horizontal">
 
-        <com.oozeetech.iproperty_cms.widgets.DLTextView
-            android:id="@+id/tvNoticeTitle"
-            style="@style/txt_txt_primary_16"
+        <com.oozeetech.iproperty_cms.widgets.DTextView
+            android:id="@+id/tvGuestName"
+            style="@style/txt_txt_primary_12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -46,14 +46,14 @@
             >
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_username_black" />
 
-            <com.oozeetech.iproperty_cms.widgets.DLTextView
+            <com.oozeetech.iproperty_cms.widgets.DTextView
                 android:id="@+id/tvGuestListPersons"
-                style="@style/txt_txt_secondary_14"
+                style="@style/txt_txt_secondary_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -71,14 +71,14 @@
 
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_calendar_gray" />
 
-            <com.oozeetech.iproperty_cms.widgets.DLTextView
+            <com.oozeetech.iproperty_cms.widgets.DTextView
                 android:id="@+id/tvGuestListDate"
-                style="@style/txt_txt_secondary_14"
+                style="@style/txt_txt_secondary_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -95,14 +95,14 @@
 
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_clock_gray" />
 
-            <com.oozeetech.iproperty_cms.widgets.DLTextView
+            <com.oozeetech.iproperty_cms.widgets.DTextView
                 android:id="@+id/tvGuestListTime"
-                style="@style/txt_txt_secondary_14"
+                style="@style/txt_txt_secondary_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -117,7 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/dividerColor"
-        android:layout_marginTop="12dp"></View>
+        android:layout_marginTop="14dp"></View>
 
 </LinearLayout>
 

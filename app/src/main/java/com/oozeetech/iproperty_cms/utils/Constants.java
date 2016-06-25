@@ -24,6 +24,12 @@ public class Constants {
     public static final String LOGIN_INFO = "login_info";
     public static final String USERNAME = "username";
     public static final String PARAM_EVENT_DATA = "event_data";
+    public static final String MASTER_FACILITY = "master_facility";
+    public static final String FACILITY_DETAILS = "facility_details";
+    public static final String DETAIL_FACILITY_DATA = "detail_facility_data";
+    public static final String TITLE = "title";
+    public static final String POSITION = "position";
+    public static final String BOOKING_DATE = "booking_date";
     public static int MAX_DISTANCE = 2000;
 
     public static String DEVICE_ID = "APA91bFzqHbowAiqI6C17BRbdQ8Ndy8EL7Luk9OZ0kObM9Bav_uMWfuHI3diw7-mryYZpec6R9rxsYqxhAWC28_m2sOMIdpHTj-X3ohf08BJoSkcFCQlHFogAoDCNubbr9mHfsLqmzEt";

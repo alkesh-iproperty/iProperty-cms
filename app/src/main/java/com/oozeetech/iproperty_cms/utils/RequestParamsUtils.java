@@ -20,4 +20,16 @@ public class RequestParamsUtils {
     public static final String EVENT_ID = "event_id";
     public static final String ACTION = "action";
     public static final String NO_OF_PERSO = "no_of_person";
+    public static final String BLOCK_ID = "block_id";
+    public static final String UNIT_ID = "unit_id";
+    public static final String GLR_ID = "glr_id";
+    public static final String NAME = "name";
+    public static final String VISITING_DATE = "visiting_date";
+    public static final String NO_OF_GUEST = "no_of_guest";
+    public static final String CHANGE_BK = "change_bk";
+    public static final String FM_ID = "fm_id";
+    public static final String DATE = "date";
+    public static final String FT_ID = "ft_id";
+    public static final String FAULT_NAME = "fault_name";
+    public static final String FAULT_DESC = "fault_desc";
 }

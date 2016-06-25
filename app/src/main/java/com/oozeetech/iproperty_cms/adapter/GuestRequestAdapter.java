@@ -11,9 +11,11 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.oozeetech.iproperty_cms.R;
+import com.oozeetech.iproperty_cms.models.GuestRequestList;
 import com.oozeetech.iproperty_cms.models.NoticesResponse;
 import com.oozeetech.iproperty_cms.utils.URLs;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,26 +28,29 @@ import butterknife.ButterKnife;
 public class GuestRequestAdapter extends RecyclerView.Adapter<GuestRequestAdapter.GuestRequestHolder> {
 
     Context context;
-    private List<NoticesResponse.Datum> data = new ArrayList<>();
+    private List<GuestRequestList.Datum> data = new ArrayList<>();
 
     private EventListener mEventListener;
     private View.OnClickListener mItemViewOnClickListener;
 
 
     public interface EventListener {
-        void onItemViewClicked(View v);
-        void onItemClick(int position);
+        void onItemClick(View v,int position);
     }
 
     public static class GuestRequestHolder extends RecyclerView.ViewHolder {
 
 
-        @Bind(R.id.tvNoticeTitle)
-        TextView tvNoticeTitle;
-        @Bind(R.id.ivNoticeItem)
-        ImageView ivNoticeItem;
-        @Bind(R.id.ivNoticeError)
-        ImageView ivNoticeError;
+        @Bind(R.id.tvGuestListDate)
+        TextView tvGuestListDate;
+        @Bind(R.id.tvGuestListPersons)
+        TextView tvGuestListPersons;
+        @Bind(R.id.tvGuestListTime)
+        TextView tvGuestListTime;
+        @Bind(R.id.tvGuestName)
+        TextView tvGuestName;
+        @Bind(R.id.ivGuestOptions)
+        ImageView ivGuestOptions;
 
         public GuestRequestHolder(View itemView) {
             super(itemView);
@@ -56,22 +61,15 @@ public class GuestRequestAdapter extends RecyclerView.Adapter<GuestRequestAdapte
     public GuestRequestAdapter(Context context) {
 
         this.context = context;
-        mItemViewOnClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemViewClick(v);
-            }
-        };
     }
 
-    private void onItemViewClick(View v) {
-        if (mEventListener != null) {
-            mEventListener.onItemViewClicked(v); // true --- pinned
-        }
+    public void updateList(int position,GuestRequestList.Datum datum){
+
+        data.set(position,datum);
+        notifyDataSetChanged();
     }
 
-
-    public void addAll(List<NoticesResponse.Datum> mData) {
+    public void addAll(List<GuestRequestList.Datum> mData) {
 
         data.addAll(mData);
         notifyDataSetChanged();
@@ -82,50 +80,53 @@ public class GuestRequestAdapter extends RecyclerView.Adapter<GuestRequestAdapte
         notifyDataSetChanged();
     }
 
+    public void remove(int position){
+        data.remove(position);
+        notifyDataSetChanged();
+    }
 
-    public NoticesResponse.Datum getItem(int position) {
+
+    public GuestRequestList.Datum getItem(int position) {
         return data.get(position);
     }
 
     @Override
     public GuestRequestHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        final View v = inflater.inflate(R.layout.item_notices, parent, false);
+        final View v = inflater.inflate(R.layout.item_guest_recent_request, parent, false);
         return new GuestRequestHolder(v);
     }
 
     @Override
     public void onBindViewHolder(final GuestRequestHolder holder, final int position) {
 
-        holder.tvNoticeTitle.setText(data.get(position).name);
+        SimpleDateFormat myFormat = new SimpleDateFormat("MMM dd, yyyy");
+        SimpleDateFormat myTimeFormate = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        Glide.with(context)
-                .load(new URLs().NOTICE_IMG_URL+data.get(position).fileName)
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)
-                .placeholder(R.drawable.ic_default_notice)
-                .crossFade()
-                .into(holder.ivNoticeItem);
+        try {
 
-        if(data.get(position).read.equals("0")){
+            holder.tvGuestListPersons.setText(data.get(position).noOfGuest);
+            holder.tvGuestListDate.setText(myFormat.format(originalFormat.parse(data.get(position).visitingDate)));
+            holder.tvGuestListTime.setText(myTimeFormate.format(originalFormat.parse(data.get(position).visitingDate)));
+            holder.tvGuestName.setText(data.get(position).name);
 
-            holder.ivNoticeError.setVisibility(View.VISIBLE);
+        }catch (Exception e){
 
-        }else {
-
-            holder.ivNoticeError.setVisibility(View.GONE);
         }
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.ivGuestOptions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(mEventListener!=null){
 
-                    mEventListener.onItemClick(position);
+                    mEventListener.onItemClick(holder.ivGuestOptions,position);
                 }
             }
         });
 
     }
+
 
     @Override
     public int getItemCount() {
