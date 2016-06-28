@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">iProperty-cms</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="err_email">Enter email address</string>
+    <string name="err_email_invalid">Invalid email address</string>
+    <string name="err_password">Enter password</string>
+    <string name="err_conf_password">Confirm password</string>
+    <string name="err_password_limit">Password must be at least 5 characters long</string>
+    <string name="err_password_match">Password does not match</string>
+    <string name="err_failed">Failed</string>
+    <string name="err_firstname">Enter FirstName</string>
+    <string name="err_lastname">Enter LastName</string>
+    <string name="err_company_name">Enter Company Name</string>
+    <string name="err_busine_type">Select business type</string>
+    <string name="err_country">Select Country</string>
+
+    <string name="hint_forgot_password">Forgot?</string>
+    <string name="hint_create_account">Create Account</string>
+    <string name="or">OR</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_msg">Are you sure want to logout?</string>
+
+    <string name="hint_firstname">First Name</string>
+    <string name="hint_lastname">Last Name</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_skip_login">Skip Login</string>
+    <string name="hint_yes">Yes</string>
+    <string name="hint_no">No</string>
+    <string name="hint_ok">Ok</string>
+    <string name="hint_cancel">Cancel</string>
+    <string name="hint_new_acc">Register New Account</string>
+    <string name="hint_continue">Continue with this account</string>
+
+
+    <!-- Navigation Menu -->
+    <string name="nav_action_home">Facility Booking</string>
+
+
+    <!-- Facility Booking Menu -->
+    <string name="menu_playground">PLAYGROUND</string>
+    <string name="menu_bbq">BBQ</string>
+    <string name="menu_gym">GYM</string>
+    <string name="menu_function_hall">FUNCTION HALL</string>
+    <string name="menu_tennis_court">TENNIS COURT</string>
+    <string name="menu_basket_ball">BASKET BALL</string>
+    <string name="title_facility_booking">Facility Booking</string>
+    <string name="nav_action_fault_repairing">Fault Repairing</string>
+    <string name="nav_action_important_number">Important Numbers</string>
+    <string name="nav_action_notices">Notices</string>
+    <string name="nav_action_management">Management</string>
+    <string name="nav_action_events">Events</string>
+    <string name="nav_action_gallery">Gallery</string>
+    <string name="nav_action_payment">Payment</string>
+    <string name="nav_action_website">Website</string>
+    <string name="nav_action_guest_list_request">Guest List Request</string>
+    <string name="hint_more">More</string>
+    <string name="event_on_month">Event on month :</string>
+    <string name="to">To</string>
+    <string name="noOfPeopleJoined">Number of peaople joined :</string>
+    <string name="description">Description : </string>
+    <string name="hint_join">Join</string>
+    <string name="hint_leave">Leave</string>
+    <string name="hint_username">Username</string>
+    <string name="btn_login">Login</string>
+    <string name="err_username">Enter Username</string>
+    <string name="internet_err">No Internet Connection</string>
+    <string name="title_notice">Notices</string>
+    <string name="title_management">Management</string>
+    <string name="title_important_no">Important Numbers</string>
+    <string name="title_event">Event</string>
+    <string name="nav_action_logout">Logout</string>
+
+    <string name="APIKey">AIzaSyAWCr50jNiC4W-Mg49k9yyaSyISfDrYPV0</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_confirm_pass">Confirm Password</string>
+    <string name="btn_update_password">Change Password</string>
+    <string name="msg_joined">Joined Event Successfully</string>
+    <string name="msg_left">Successfully Left Event</string>
+    <string name="msg_already_accepted_rejected">Already accepted or declined</string>
+    <string name="msg_not_updated">Not Updated</string>
+    <string name="msg_no_data_found">No Data Found</string>
+    <string name="msg_invalid_event_type">Event Type is not valid</string>
+    <string name="msg_exception">Exception</string>
+    <string name="msg_unauthorised">Unauthorized Access</string>
+    <string name="hint_cencel">Cancel</string>
+    <string name="err_no_of_person">Enter No. of persons</string>
+    <string name="hint_no_of_person">No. of persons</string>
+    <string name="title_guest_request">Guest List Request</string>
+    <string name="title_add_request">Add Request</string>
+    <string name="title_recent_request">Recent Request</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_submit">Submit</string>
+    <string name="hint_expected_person">Expected Persons</string>
+    <string name="hint_time">Time</string>
+    <string name="hint_delete">Delete</string>
+    <string name="hint_edit">Edit</string>
+    <string name="hint_confirm_delete">Are you sure You want to delete this item?</string>
+    <string name="err_add_req_guest_name">Enter Name</string>
+    <string name="err_add_req_expected_people">Enter Expected People</string>
+    <string name="err_add_req_time">Enter Time</string>
+    <string name="hint_date">Date</string>
+    <string name="err_add_req_date">Enter Date</string>
+    <string name="msg_success_add_guest">Successfully registered</string>
+    <string name="msg_facility_not_found">Facility Master Not Found</string>
+    <string name="msg_child_facility_not_found">Facility child not found</string>
+    <string name="msg_to_erlier">You can\'t book too earlier</string>
+    <string name="msg_blocked_by_admin">Your account has been blocked by management. Please contact them for more clarification</string>
+    <string name="msg_exeed_limit">You have exceeded your monthly booking quota</string>
+    <string name="hint_book">Book</string>
+    <string name="hint_fees">Fees</string>
+    <string name="hint_fees_">Fees :</string>
+    <string name="msg_free_facility">This Facility is free to use. No need to book this facility</string>
+    <string name="hint_take_picture">Take a picture</string>
+    <string name="msg_fault_report">If you find any damages in your premises, Please take a picture and send it to us ans we will repair it as soon as possible</string>
+    <string name="title_fault_reporting">Fault Reporting</string>
+    <string name="menu_view_all">View All</string>
+    <string name="title_all_faults">Past Repoted Faults</string>
+    <string name="hint_fault_desc">Description</string>
+    <string name="hint_fault_title">Title</string>
+    <string name="err_fault_title">Enter Fault Title</string>
+    <string name="err_description">Enter Desciption</string>
+    <string name="msg_upload_failed">Failed Image Upload</string>
+    <string name="msg_success_add_fault">Fault reported successfully</string>
+    <string name="err_take_picture">Picture could not taken</string>
+    <string name="msg_success_booking">Facility Booked</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_gallery_details">Pictures</string>
+    <string name="nav_action_maintenance">Maintanance</string>
+    <string name="nav_action_quit_rent">Quite Rent</string>
+    <string name="nav_action_fire_insurance">Fire Insurence</string>
+    <string name="nav_action_sinking_fund">SInking Funds</string>
+    <string name="nav_action_push_notification">Push Notification</string>
+
+</resources>
