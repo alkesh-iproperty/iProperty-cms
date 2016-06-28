@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="12dp"
+        android:orientation="vertical">
+
+        <com.oozeetech.iproperty_cms.widgets.DTextView
+            android:id="@+id/tvDetailFacilityName"
+            style="@style/txt_txt_primary_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    style="@style/txt_txt_secondary_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_fees_" />
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    android:id="@+id/tvDetailFacilityFees"
+                    style="@style/txt_txt_secondary_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:text="@string/app_name" />
+
+            </LinearLayout>
+
+
+            <com.oozeetech.iproperty_cms.widgets.DButtonMaterial
+                android:id="@+id/btnBookFacility"
+                style="@style/InverseLightFlatWaveColorButtonRippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/btn_bg"
+                android:text="@string/hint_book"
+                android:textColor="@color/gray_50"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="@color/dividerColor" />
+
+
+</LinearLayout>

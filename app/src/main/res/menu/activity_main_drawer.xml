@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_action_facility_booking"
+            android:icon="@drawable/ic_menu_facility_booking"
+            android:title="@string/nav_action_home" />
+
+        <item
+            android:id="@+id/nav_action_fault_repairing"
+            android:icon="@drawable/ic_menu_fault_reporting"
+            android:title="@string/nav_action_fault_repairing" />
+
+        <item
+            android:id="@+id/nav_action_important_number"
+            android:icon="@drawable/ic_menu_impnum"
+            android:title="@string/nav_action_important_number"
+            app:actionViewClass="com.oozeetech.iproperty_cms.widgets.DTextView" />
+
+        <item
+            android:id="@+id/nav_action_notices"
+            android:icon="@drawable/ic_menu_notices"
+            android:title="@string/nav_action_notices"
+            app:actionViewClass="com.oozeetech.iproperty_cms.widgets.DTextView" />
+
+        <item
+            android:id="@+id/nav_action_management"
+            android:icon="@drawable/ic_menu_management"
+            android:title="@string/nav_action_management"
+            app:actionViewClass="com.oozeetech.iproperty_cms.widgets.DTextView" />
+
+        <item
+            android:id="@+id/nav_action_events"
+            android:icon="@drawable/ic_menu_events"
+            android:title="@string/nav_action_events"
+            app:actionViewClass="com.oozeetech.iproperty_cms.widgets.DTextView" />
+
+        <item
+            android:id="@+id/nav_action_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/nav_action_gallery"
+            app:actionViewClass="com.oozeetech.iproperty_cms.widgets.DTextView" />
+
+        <item
+            android:id="@+id/nav_action_website"
+            android:icon="@drawable/ic_menu_website"
+            android:title="@string/nav_action_website" />
+
+        <item
+            android:id="@+id/nav_action_guest_list_request"
+            android:icon="@drawable/ic_menu_guest_list"
+            android:title="@string/nav_action_guest_list_request" />
+
+        <item
+            android:id="@+id/nav_action_maintenance"
+            android:icon="@drawable/ic_maintanance"
+            android:title="@string/nav_action_maintenance" />
+
+        <item
+            android:id="@+id/nav_action_quit_rent"
+            android:icon="@drawable/ic_quite_rent"
+            android:title="@string/nav_action_quit_rent" />
+
+        <item
+            android:id="@+id/nav_action_fire_insurance"
+            android:icon="@drawable/ic_fire_insurance"
+            android:title="@string/nav_action_fire_insurance" />
+
+        <item
+            android:id="@+id/nav_action_sinking_fund"
+            android:icon="@drawable/ic_sinking_fund"
+            android:title="@string/nav_action_sinking_fund" />
+
+        <item
+            android:id="@+id/nav_action_push_notification"
+            android:icon="@drawable/ic_push_notification"
+            android:title="@string/nav_action_push_notification"
+            app:actionViewClass="com.oozeetech.iproperty_cms.widgets.DTextView" />
+
+        <item
+            android:id="@+id/nav_action_logout"
+            android:icon="@drawable/ic_menu_guest_list"
+            android:title="@string/nav_action_logout" />
+    </group>
+</menu>

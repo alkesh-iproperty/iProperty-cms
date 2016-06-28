@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/GrayTextAppearence.App.TextInputLayout_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="true">
+
+        <com.oozeetech.iproperty_cms.widgets.DLEditText
+            android:id="@+id/etAddReqName"
+            style="@style/txt_txt_primary_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_username_black"
+            android:drawablePadding="10dp"
+            android:ems="15"
+            android:hint="@string/hint_name"
+            android:inputType="text"
+            android:paddingBottom="8dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/secondaryText"
+            android:textCursorDrawable="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/secondaryText" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/GrayTextAppearence.App.TextInputLayout_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="true">
+
+        <com.oozeetech.iproperty_cms.widgets.DLEditText
+            android:id="@+id/etAddRequestExpected"
+            style="@style/txt_txt_primary_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_expected_people"
+            android:drawablePadding="10dp"
+            android:ems="15"
+            android:hint="@string/hint_expected_person"
+            android:inputType="number"
+            android:paddingBottom="8dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/secondaryText"
+            android:textCursorDrawable="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/secondaryText" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/GrayTextAppearence.App.TextInputLayout_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="true">
+
+        <com.oozeetech.iproperty_cms.widgets.DLEditText
+            android:id="@+id/etAddReqTime"
+            style="@style/txt_txt_primary_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_clock_gray"
+            android:drawablePadding="10dp"
+            android:editable="false"
+            android:ems="15"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/hint_time"
+            android:inputType="none"
+            android:paddingBottom="8dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/secondaryText"
+            android:textCursorDrawable="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/secondaryText" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/GrayTextAppearence.App.TextInputLayout_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="true">
+
+        <com.oozeetech.iproperty_cms.widgets.DLEditText
+            android:id="@+id/etAddReqDate"
+            style="@style/txt_txt_primary_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_calendar_gray"
+            android:drawablePadding="10dp"
+            android:editable="false"
+            android:ems="15"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/hint_date"
+            android:inputType="none"
+            android:paddingBottom="8dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/secondaryText"
+            android:textCursorDrawable="@null" />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/secondaryText" />
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

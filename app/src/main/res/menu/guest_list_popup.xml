@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/popup_edit"
+        android:icon="@drawable/ic_edit_gray"
+        android:title="@string/hint_edit" />
+
+    <item
+        android:id="@+id/popup_delete"
+        android:icon="@drawable/ic_delete_gray"
+        android:title="@string/hint_delete" />
+
+</menu>
