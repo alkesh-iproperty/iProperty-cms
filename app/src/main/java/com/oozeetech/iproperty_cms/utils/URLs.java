@@ -26,13 +26,26 @@ public class URLs {
     public final String MASTER_FACILITY = MAIN_URL + "/facilitymaster/listfacilitymaster";
     public final String CHILD_FACILITY = MAIN_URL + "/facilitychild/listfts";
     public final String ADD_BOOKING = MAIN_URL + "/facilitybooking/bookfacility";
+    public final String LIST_FACILITY_BOOKING = MAIN_URL + "/facilitybooking/listresbooking";
+    public final String CANCEL_BOOKING = MAIN_URL + "/facilitybooking/cancelbooking";
     public final String VIEW_ALL_FAULTS = MAIN_URL + "/faultreporting/listfaultphoto";
     public final String ADD_FAULT = MAIN_URL + "/faultreporting/addfault";
     public final String GALLERY = MAIN_URL + "/gallery/listgallery";
     public final String GALLERY_DETAILS_LIST = MAIN_URL + "/galleryitem/listgalleryitem";
     public final String GALLERY_UPDATE_READ_STATUS = MAIN_URL + "/gallery/upunreadgallery";
-    public final String MAINTENANCE_PAYMENT = MAIN_URL + "/maintenancepayment/checkpaymaintenance";
     public final String TAB_CONFIG = MAIN_URL + "/settings/tabconfiguration";
+    public final String CHECK_MAINTANANCE = MAIN_URL + "/maintenancepayment/checkpaymaintenance";
+    public final String PAY_MAINTANANCE = MAIN_URL + "/maintenancepayment/paymaintenance";
+    public final String CHECK_QUIT_RENT = MAIN_URL + "/quitrent/checkpayquitrent";
+    public final String PAY_QUIT_RENT = MAIN_URL + "/quitrent/payquitrent";
+    public final String CHECK_INSURANCE = MAIN_URL + "/fireinsurance/checkpayfireinsurance";
+    public final String PAY_INSURANCE = MAIN_URL + "/fireinsurance/payfireinsurance";
+    public final String CHECK_SINKING = MAIN_URL + "/sinkingfund/checkpaysinkingfund";
+    public final String PUSH_NOTIFICATION_LIST = MAIN_URL + "/pushnotification/pnlist";
+    public final String UPDATE_PUSH_NOTIFICATION_READ = MAIN_URL + "/pushnotification/upunreadnp";
+
+
+
 
     public final String MANAGEMENT_IMG_URL = MAIN_URL + "/upload/management/";
     public final String NOTICE_IMG_URL = MAIN_URL + "/upload/notice/";
