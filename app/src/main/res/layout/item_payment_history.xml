@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:contentPadding="16dp"
+    app:cardMaxElevation="2dp"
+    app:cardElevation="2dp"
+    android:paddingTop="10dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                style="@style/txt_txt_primary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_transaction_no" />
+
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                android:id="@+id/tvPaymentHistoryTransNo"
+                style="@style/txt_txt_secondary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                android:id="@+id/tvPaymentHistoryStatus"
+                style="@style/txt_primary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                style="@style/txt_txt_primary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_pay_date_" />
+
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                android:id="@+id/tvPaymentHistoryPayDate"
+                style="@style/txt_txt_secondary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"/>
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                android:id="@+id/tvPaymentHistoryPaymentType"
+                style="@style/txt_primary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    style="@style/txt_txt_secondary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_amount" />
+
+                <com.oozeetech.iproperty_cms.widgets.DBTextView
+                    android:id="@+id/tvPaymentHistoryAmount"
+                    style="@style/txt_primary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_400" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    style="@style/txt_txt_secondary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_panelty_amount" />
+
+                <com.oozeetech.iproperty_cms.widgets.DBTextView
+                    android:id="@+id/tvPaymentHistoryPeneltyAmount"
+                    style="@style/txt_primary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_400" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    style="@style/txt_txt_secondary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_total_amount" />
+
+                <com.oozeetech.iproperty_cms.widgets.DBTextView
+                    android:id="@+id/tvPaymentHistoryTotalAmount"
+                    style="@style/txt_primary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                style="@style/txt_txt_primary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_bank_name_" />
+
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                android:id="@+id/tvPaymentHistoryBankName"
+                style="@style/txt_txt_secondary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                style="@style/txt_txt_primary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_check_no_" />
+
+
+            <com.oozeetech.iproperty_cms.widgets.DTextView
+                android:id="@+id/tvPaymentHistoryChequeNo"
+                style="@style/txt_txt_secondary_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    style="@style/txt_txt_primary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_date_" />
+
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    android:id="@+id/tvPaymentHistoryDate"
+                    style="@style/txt_txt_secondary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    style="@style/txt_txt_primary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_time_" />
+
+
+                <com.oozeetech.iproperty_cms.widgets.DTextView
+                    android:id="@+id/tvPaymentHistoryTime"
+                    style="@style/txt_txt_secondary_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+

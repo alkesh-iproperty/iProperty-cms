@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -56,16 +57,24 @@
             android:name=".ui.GuestRequestActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".ui.FacilityBookingDashbordActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.FacilitybookingListActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.FacilityBookingDashbordActivity"
+            ></activity>
+        <activity
             android:name=".ui.FaultReportingActivity"
             android:parentActivityName=".ui.HomeActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".ui.FacilityBookindActivity"
-            android:parentActivityName=".ui.HomeActivity"
+            android:parentActivityName=".ui.FacilityBookingDashbordActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.DetailFacilityBookingActivity"
-            android:parentActivityName=".ui.HomeActivity"
+            android:parentActivityName=".ui.FacilityBookingDashbordActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".ui.GalleryDetailListActivity"
@@ -76,11 +85,18 @@
             android:parentActivityName=".ui.FaultReportingActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".ui.PushNotificationActivity"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".ui.EventsDetailsActivity"
             android:parentActivityName=".ui.EventsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"/>
 
-        </activity>
+        <activity
+            android:name=".ui.PaymentDetailsActivity"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

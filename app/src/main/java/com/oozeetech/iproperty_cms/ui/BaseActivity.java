@@ -227,7 +227,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_action_facility_booking) {
+        if (id == R.id.nav_action_home) {
 
             if (!navigationView.getMenu().getItem(0).isChecked()) {
 
@@ -236,6 +236,13 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
+
+        }
+
+        if (id == R.id.nav_action_facility_booking) {
+
+                Intent intent = new Intent(getActivity(), FacilityBookingDashbordActivity.class);
+                startActivity(intent);
 
         }
 
@@ -298,9 +305,42 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
-        if (id == R.id.nav_action_logout) {
+        if (id == R.id.nav_action_maintenance) {
 
-            confirmLogout();
+            Intent intent = new Intent(getActivity(), PaymentDetailsActivity.class);
+            intent.putExtra(Constants.FROM_PAYMENT_TYPE,Constants.TYPE_MAINTANANCE);
+            startActivity(intent);
+
+        }
+
+        if (id == R.id.nav_action_sinking_fund) {
+
+            Intent intent = new Intent(getActivity(), PaymentDetailsActivity.class);
+            intent.putExtra(Constants.FROM_PAYMENT_TYPE,Constants.TYPE_SINKING_FUND);
+            startActivity(intent);
+
+        }
+
+        if (id == R.id.nav_action_quit_rent) {
+
+            Intent intent = new Intent(getActivity(), PaymentDetailsActivity.class);
+            intent.putExtra(Constants.FROM_PAYMENT_TYPE,Constants.TYPE_QUITE_RENT);
+            startActivity(intent);
+
+        }
+
+        if (id == R.id.nav_action_fire_insurance) {
+
+            Intent intent = new Intent(getActivity(), PaymentDetailsActivity.class);
+            intent.putExtra(Constants.FROM_PAYMENT_TYPE,Constants.TYPE_FIRE_INSURENCE);
+            startActivity(intent);
+
+        }
+
+        if (id == R.id.nav_action_push_notification) {
+
+            Intent intent = new Intent(getActivity(), PushNotificationActivity.class);
+            startActivity(intent);
 
         }
 
@@ -310,6 +350,14 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
         }
+
+        if (id == R.id.nav_action_logout) {
+
+            confirmLogout();
+
+        }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

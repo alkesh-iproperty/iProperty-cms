@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_prev_booking_list"
+        android:icon="@drawable/ic_view_all"
+        android:title="@string/menu_prev_booking"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_upcoming_booking_list"
+        android:icon="@drawable/ic_view_all"
+        android:title="@string/menu_upcoming_booking"
+        app:showAsAction="never" />
+
+</menu>

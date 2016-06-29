@@ -38,7 +38,7 @@
 
 
     <!-- Navigation Menu -->
-    <string name="nav_action_home">Facility Booking</string>
+    <string name="nav_action_home">Home</string>
 
 
     <!-- Facility Booking Menu -->
@@ -49,6 +49,7 @@
     <string name="menu_tennis_court">TENNIS COURT</string>
     <string name="menu_basket_ball">BASKET BALL</string>
     <string name="title_facility_booking">Facility Booking</string>
+    <string name="nav_action_facility">Facility Booking</string>
     <string name="nav_action_fault_repairing">Fault Repairing</string>
     <string name="nav_action_important_number">Important Numbers</string>
     <string name="nav_action_notices">Notices</string>
@@ -133,7 +134,30 @@
     <string name="nav_action_maintenance">Maintanance</string>
     <string name="nav_action_quit_rent">Quite Rent</string>
     <string name="nav_action_fire_insurance">Fire Insurence</string>
-    <string name="nav_action_sinking_fund">SInking Funds</string>
+    <string name="nav_action_sinking_fund">Sinking Funds</string>
     <string name="nav_action_push_notification">Push Notification</string>
+    <string name="title_home">Home</string>
+    <string name="title_prev_booking">Previous Bookings</string>
+    <string name="hint_pay_now">Pay Now</string>
+    <string name="title_maintanance_payment">Maintanance</string>
+    <string name="title_fire_insurence_payment">Fire Insurence</string>
+    <string name="title_quite_rent_payment">Quit Rent</string>
+    <string name="title_sinking_fund_payment">Sinking Fund</string>
+    <string name="title_history">History</string>
+    <string name="hint_payment">Payment</string>
+    <string name="hint_panelty_amount">Panelty</string>
+    <string name="hint_total_amount">Total</string>
+    <string name="hint_pay_date_">Pay Date : </string>
+    <string name="hint_you_can_pay_">You can pay :</string>
+    <string name="title_push_noti">Push Notification</string>
+    <string name="hint_payment_history">Payment History</string>
+    <string name="hint_transaction_no">Transaction No. :</string>
+    <string name="hint_amount">Amount</string>
+    <string name="hint_check_no_">Cheque No.  :</string>
+    <string name="hint_bank_name_">Bank Name :</string>
+    <string name="hint_date_">Date :</string>
+    <string name="hint_time_">TIme :</string>
+    <string name="menu_prev_booking">Previous Bookings</string>
+    <string name="menu_upcoming_booking">Upcoming Bookings</string>
 
 </resources>

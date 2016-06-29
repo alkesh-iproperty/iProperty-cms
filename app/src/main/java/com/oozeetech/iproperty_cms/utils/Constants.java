@@ -32,6 +32,13 @@ public class Constants {
     public static final String BOOKING_DATE = "booking_date";
     public static final String GALLERY_DETAIL_DATA = "gallery_details_data";
     public static final String SENDER_ID = "1097226950144";
+    public static final String FROM_BOOKING_TYPE = "booking_type";
+    public static final String FROM_PAYMENT_TYPE = "payment_type";
+    public static final int TYPE_SINKING_FUND = 4;
+    public static final int TYPE_FIRE_INSURENCE = 3;
+    public static final int TYPE_QUITE_RENT = 2;
+    public static final int TYPE_MAINTANANCE = 1;
+    public static final String PAYMENT_HISTORY = "payment_history";
     public static int MAX_DISTANCE = 2000;
     public static String DEVICE_ID = "APA91bFzqHbowAiqI6C17BRbdQ8Ndy8EL7Luk9OZ0kObM9Bav_uMWfuHI3diw7-mryYZpec6R9rxsYqxhAWC28_m2sOMIdpHTj-X3ohf08BJoSkcFCQlHFogAoDCNubbr9mHfsLqmzEt";
 

@@ -35,4 +35,5 @@ public class RequestParamsUtils {
     public static final String FAULT_PHOTO = "fault_photo";
     public static final String G_ID = "g_id";
     public static final String _ID = "_id";
+    public static final String UPCOMING = "upcoming";
 }
